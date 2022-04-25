@@ -16,5 +16,7 @@ export const graphQLPostalCodeQueryData = {
     postalCode: '90211',
     countryCode: 'us',
   },
-  mock: {getPostalCodeInfo: { country: 'United States', postalCode: '90211' }},
+  mock: {
+    getPostalCodeInfo: { country: 'United States', postalCode: '90211' },
+  },
 }

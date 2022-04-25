@@ -16,7 +16,7 @@ describe('e2e', () => {
       .set('Content-Type', 'application/json')
       .set('Accept', 'application/json')
       .send(graphQLPostalCodeQueryData)
-      
+
     expect(response.errors).toBeUndefined()
     expect(response.body.data).toStrictEqual(graphQLPostalCodeQueryData.mock)
   })

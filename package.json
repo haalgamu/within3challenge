@@ -4,8 +4,8 @@
   "description": "Within3 Software Engineer Code Challenge",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "jest --silent",
+    "test:coverage": "jest --coverage --silent",
     "build": "tsc",
     "start": "node dist/src/index.js",
     "lint": "eslint --ext .js,.ts .",
