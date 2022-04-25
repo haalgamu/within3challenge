@@ -5,9 +5,7 @@ import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-co
 import { buildSchema } from 'type-graphql'
 import { PostalCodeResolver } from './resolvers/PostalCodeResolver'
 
-const port = 4000
-
-const main = async () => {
+export async function createServer() {
   const app = express()
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
@@ -20,7 +18,5 @@ const main = async () => {
 
   apolloServer.applyMiddleware({ app: app as any })
 
-  app.listen(port, () => console.log(`'Server is running: ${port}`))
+  return app
 }
-
-main().catch(err => console.log(err))
